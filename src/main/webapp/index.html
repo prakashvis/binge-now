@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Binge Now!</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link integrity="" rel="stylesheet" href="assets/vendor.css">
+        <link integrity="" rel="stylesheet" href="assets/binge.css">
+    </head>
+    <body>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">Binge Now</label>
+            <ul>
+                <li><a class="active" href="#">Recommended Show</a></li>
+                <li><a href="watchlist.html">Watchlist</a></li>
+                <li><a onclick="reset()">Reset</a></li>
+                <li><a onclick="logout()">Logout</a></li>
+            </ul>
+        </nav>
+
+        <script>
+
+            if(localStorage.getItem('bingenow.username') == null) {
+                document.location = 'login.html';
+            }
+
+        </script>
+
+        <div id="show" class="show-section">
+
+            <div class="poster">
+                <img id="poster" src="https://static.tvmaze.com/uploads/images/original_untouched/53/132716.jpg">
+            </div>
+            <div class="heropage">
+                <div class="inside-heropage">
+                    <h1 id="show-name"></h1>
+                    <div class="overview">
+                        <p id="show-details"></p><br>
+                        <p><b>Starring: </b></p>
+                        <p id="show-cast"></p><br>
+                        <a id="show-url" target="_blank">Visit Website</a><br>
+                    </div>
+                    <div class="btn1">
+                        <a onclick="fetchShow()"><i class="fas fa-play"></i>Next Show</a>
+                        <a onclick="addToWatchList()"><i class="fas fa-heart"></i>Add to Watchlist</a>
+                    </div>
+                    <div class="summary">
+                        <br>
+                        <p><b>Summary: </b></p>
+                        <div id="show-summary" class="show-summary">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="show-error"><h1>Error!</h1></div>
+
+        <script>
+            fetchShow();
+        </script>
+    </body>
+</html>

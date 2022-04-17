@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Watchlist</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link integrity="" rel="stylesheet" href="assets/vendor.css">
+    <link integrity="" rel="stylesheet" href="assets/binge.css">
+</head>
+<body>
+
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Binge Now</label>
+        <ul>
+            <li><a href="index.html">Recommended Show</a></li>
+            <li><a class="active" href="#">Watchlist</a></li>
+            <li><a onclick="reset()">Reset</a></li>
+            <li><a onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="watchlist" id="watchlist">
+        <h2>Your watchlist,</h2>
+        <div class="watchlist-box">
+            <ul id="watchlist-list">
+
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        getWatchlist();
+    </script>
+
+</body>
+</html>
