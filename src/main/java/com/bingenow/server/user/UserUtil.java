@@ -8,6 +8,12 @@ import org.json.simple.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ *
+ *  Author : Prakash U
+ *
+ */
+
 public class UserUtil {
     public static int createUser(String username, String password)
     {

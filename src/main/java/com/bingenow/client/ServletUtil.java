@@ -5,6 +5,13 @@ import org.json.simple.JSONObject;
 import javax.servlet.http.HttpServletResponse;
 import java.io.PrintWriter;
 
+/*
+ *
+ *  Author : Prakash U
+ *
+ */
+
+
 public class ServletUtil
 {
 

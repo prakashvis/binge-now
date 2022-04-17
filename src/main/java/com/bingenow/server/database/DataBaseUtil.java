@@ -2,6 +2,12 @@ package com.bingenow.server.database;
 
 public class DataBaseUtil {
 
+    /*
+     *
+     *  Author : Prakash U
+     *
+     */
+
     public static class DBConstants {
 
         //TABLE NAMES

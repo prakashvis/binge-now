@@ -7,6 +7,12 @@ import org.json.simple.parser.JSONParser;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
+/*
+ *
+ *  Author : Prakash U
+ *
+ */
+
 @WebServlet(name = "userServlet", value = "/user")
 public class UserServlet extends HttpServlet{
 

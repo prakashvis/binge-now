@@ -6,6 +6,12 @@ import org.json.simple.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ *
+ *  Author : Prakash U
+ *
+ */
+
 public class UserHandler {
 
     public static boolean addUser(String username, String password)
